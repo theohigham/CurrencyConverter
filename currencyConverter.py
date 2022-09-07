@@ -1,3 +1,6 @@
+from forex_python.converter import CurrencyRates
+c = CurrencyRates()
+
 print("Welcome to the python currency converter!")
 print("Supported currencies include: USD, GBP, EUR, AUD, CNY, INR, CAD, JPY")
 
@@ -5,13 +8,13 @@ conversionRates = {
 #USD to ..
 
 "USD" : 1.0,	
-"GBP" : 0.87125,
-"EUR" : 1.0053,
-"AUD" : 1.4858,
-"CNY" : 1.3171,
-"INR" : 79.820,
-"CAD" : 1.3172,
-"JPY" : 144.42
+"GBP" : c.get_rate('USD','GBP'),
+"EUR" : c.get_rate('USD','EUR'),
+"AUD" : c.get_rate('USD','AUD'),
+"CNY" : c.get_rate('USD','CNY'),
+"INR" :	c.get_rate('USD','INR'),
+"CAD" : c.get_rate('USD','CAD'),
+"JPY" : c.get_rate('USD','JPY')
 
 }
 
